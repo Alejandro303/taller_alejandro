@@ -1,0 +1,110 @@
+/* --- VARIABLES DE COLOR --- */
+:root {
+    --primario: #2563eb;
+    --oscuro: #1e293b;
+    --claro: #f8fafc;
+    --texto: #334155;
+    --blanco: #ffffff;
+}
+
+/* --- ESTILOS BASE --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--claro);
+    color: var(--texto);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background: var(--blanco);
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: var(--primario);
+    border-bottom: 2px solid var(--primario);
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+/* --- CABECERA --- */
+.header-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    background: var(--blanco);
+}
+
+.foto-perfil {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px; /* Bordes redondeados modernos */
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- DISEÑO EN COLUMNAS --- */
+.grid-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* --- LISTA DE CONOCIMIENTOS (BADGES) --- */
+.badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.badge-list li {
+    background: var(--primario);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* --- VIDEO RESPONSIVO --- */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- ADAPTACIÓN A MÓVILES --- */
+@media (max-width: 768px) {
+    .header-grid, .grid-info {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .foto-perfil {
+        margin: 0 auto;
+    }
+    .badge-list {
+        justify-content: center;
+    }
+}
