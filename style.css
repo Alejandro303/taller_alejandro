@@ -96,7 +96,7 @@ h2 {
 }
 
 /* --- ADAPTACIÓN A MÓVILES --- */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .header-grid, .grid-info {
         grid-template-columns: 1fr;
         text-align: center;
